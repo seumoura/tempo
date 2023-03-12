@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-  <center><h2>TEMPO NA FABx</h2></center>
+  <center><h2>TEMPO NA FAB</h2></center>
     <div class="progress">
   <div class="progress-bar  progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="todayPercent"></span></div>
   </div>
@@ -39,7 +39,7 @@ $(function(){
 var end = new Date("10/04/2023");
 var start = new Date("02/01/2016");
 var today = new Date();
-var progress = Math.round(((today - start) / (end - start)) * 100).toFixed(2);
+var progress = Math.round(((today - start) / (end - start)) * 100).toFixed(1);
 $('.progress-bar').css('width', progress+'%').attr('aria-valuenow', progress);
 $('.todayPercent').text(progress + '%');
 });
