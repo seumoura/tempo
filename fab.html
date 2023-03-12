@@ -40,7 +40,7 @@ var end = new Date("10/04/2023");
 var start = new Date("02/01/2016");
 var today = new Date();
 var progress = Math.round(((today - start) / (end - start)) * 100);
-
+progress = +progress.toFixed(2);
 $('.progress-bar').css('width', progress+'%').attr('aria-valuenow', progress);
 $('.todayPercent').text(progress + '%');
 });
